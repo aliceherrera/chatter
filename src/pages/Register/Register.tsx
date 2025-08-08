@@ -11,18 +11,46 @@ const Register = () => {
         <S.Title>Cadastro</S.Title>
         <div>
           <S.Form>
-            <label htmlFor="name">Nome</label>
-            <input type="text" name="name" placeholder="Nome" />
-            <label htmlFor="email">E-mail</label>
-            <input type="email" name="email" placeholder="E-mail" />
-            <label htmlFor="senha">Senha</label>
-            <input type="password" name="senha" placeholder="Senha" />
-            <label htmlFor="repetirSenha">Repetir Senha</label>
-            <input
-              type="password"
-              name="repetirSenha"
-              placeholder="Repetir senha"
-            />
+            <S.InputGroup>
+              <input
+                type="text"
+                name="name"
+                id="name"
+                placeholder=" "
+                required
+              />
+              <label htmlFor="name">Nome</label>
+            </S.InputGroup>
+            <S.InputGroup>
+              <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder=" "
+                required
+              />
+              <label htmlFor="email">E-mail</label>
+            </S.InputGroup>
+            <S.InputGroup>
+              <input
+                type="password"
+                name="senha"
+                id="senha"
+                placeholder=" "
+                required
+              />
+              <label htmlFor="senha">Senha</label>
+            </S.InputGroup>
+            <S.InputGroup>
+              <input
+                type="password"
+                name="repetirSenha"
+                id="repetirSenha"
+                placeholder=" "
+                required
+              />
+              <label htmlFor="repetirSenha">Repetir Senha</label>
+            </S.InputGroup>
           </S.Form>
         </div>
         <S.Note>
