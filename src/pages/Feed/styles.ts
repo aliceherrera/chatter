@@ -59,8 +59,3 @@ export const Separator = styled.hr`
   border-top: 1px solid #f0f0f0;
   margin: 0;
 `;
-
-export const FeedList = styled.div`
-  display: flex;
-  flex-direction: column;
-`;

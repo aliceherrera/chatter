@@ -8,6 +8,7 @@ import {
   BiSolidHomeSmile,
   BiSolidUser,
 } from "react-icons/bi";
+import NewPost from "../NewPost/NewPost";
 
 const Sidebar = () => {
   return (
@@ -38,6 +39,8 @@ const Sidebar = () => {
       <S.Bottom>
         <Button>Falar</Button>
       </S.Bottom>
+
+      {/* <NewPost /> */}
     </S.Container>
   );
 };
