@@ -15,6 +15,7 @@ export const Layout = styled.div`
 
 export const SideArea = styled.aside`
   position: sticky;
+  z-index: 10;
   top: 0;
   align-self: start;
   height: 100dvh;
