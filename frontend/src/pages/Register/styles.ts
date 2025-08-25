@@ -32,20 +32,48 @@ export const Form = styled.form`
   display: flex;
   flex-direction: column;
   width: 100%;
-  margin: 24px 0;
+  margin: 24px 0 0;
+`;
 
-  label {
-    font-size: 12px;
-    color: #878787;
-    padding-top: 8px;
-  }
+export const InputGroup = styled.div`
+  position: relative;
+  width: 352px;
+  margin-bottom: 24px;
+
   input {
-    padding: 4px 8px;
+    width: 352px;
+    padding: 14px 12px;
     border-radius: 8px;
     border: none;
-    filter: drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.15));
+    outline: none;
     background-color: #fbfbfb;
-    width: 352px;
+    filter: drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.15));
+    color: #0e0e0e;
+  }
+
+  input:focus {
+    filter: drop-shadow(0 0 0 rgba(0, 0, 0, 0))
+      drop-shadow(0px 0px 0px rgba(0, 0, 0, 0))
+      drop-shadow(0px 2px 6px rgba(0, 0, 0, 0.18));
+  }
+
+  label {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 14px;
+    color: #878787;
+    pointer-events: none;
+    transition: top 0.15s ease, transform 0.15s ease, font-size 0.15s ease,
+      color 0.15s ease;
+  }
+
+  input:focus + label,
+  input:not(:placeholder-shown) + label {
+    top: -16px;
+    transform: none;
+    font-size: 12px;
     color: #0e0e0e;
   }
 `;
@@ -58,7 +86,7 @@ export const Title = styled.h1`
 
 export const SubTitle = styled.h2`
   font-size: 20px;
-  margin: 32px 0 16px;
+  margin: 24px 0 8px;
 `;
 
 export const Note = styled.p`
@@ -66,5 +94,5 @@ export const Note = styled.p`
   color: #878787;
   max-width: 352px;
   text-align: center;
-  margin-bottom: 24px;
+  margin-bottom: 16px;
 `;

@@ -12,10 +12,26 @@ const Login = () => {
         <S.Title>Seja bem vindo!</S.Title>
         <div>
           <S.Form>
-            <label htmlFor="email">E-mail</label>
-            <input type="email" name="email" />
-            <label htmlFor="senha">Senha</label>
-            <input type="password" name="senha" />
+            <S.InputGroup>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder=" "
+                required
+              />
+              <label htmlFor="email">E-mail</label>
+            </S.InputGroup>
+            <S.InputGroup>
+              <input
+                type="password"
+                id="senha"
+                name="senha"
+                placeholder=" "
+                required
+              />
+              <label htmlFor="senha">Senha</label>
+            </S.InputGroup>
           </S.Form>
         </div>
         <Button>Entrar</Button>

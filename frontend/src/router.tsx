@@ -1,8 +1,8 @@
 import { Routes, Route, Navigate } from "react-router-dom";
 import Login from "./pages/Login/Login";
 import Register from "./pages/Register/Register";
-import Feed from "./pages/Feed";
-import Profile from "./pages/Profile";
+import Feed from "./pages/Feed/Feed";
+import Profile from "./pages/Profile/Profile";
 import { useAuth } from "./context/AuthContext";
 
 interface PrivateRouteProps {
@@ -19,22 +19,16 @@ export default function Router() {
     <Routes>
       <Route path="/login" element={<Login />} />
       <Route path="/register" element={<Register />} />
-      <Route
-        path="/"
-        element={
-          <PrivateRoute>
-            <Feed />
-          </PrivateRoute>
-        }
-      />
-      <Route
+      <Route path="/feed" element={<Feed />} />
+      <Route path="/profile/:username" element={<Profile />} />
+      {/* <Route
         path="/profile/:username"
         element={
           <PrivateRoute>
             <Profile />
           </PrivateRoute>
         }
-      />
+      /> */}
     </Routes>
   );
 }
