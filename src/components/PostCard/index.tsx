@@ -1,21 +1,35 @@
 import * as S from "./styles";
 import { BiCommentDetail, BiHeart } from "react-icons/bi";
+import * as enums from "../../utils/enums/Category";
 
 type Props = {
-  author: string;
+  username: string;
+  fullname: string;
+  avatar: string;
   text: string;
   when: string;
   likes: number;
   comments: number;
+  favorite: enums.Favorite;
+  follow: enums.Follow;
 };
 
-const PostCard = ({ author, text, when, likes, comments }: Props) => {
+const PostCard = ({
+  username,
+  fullname,
+  avatar,
+  text,
+  when,
+  likes,
+  comments,
+}: Props) => {
   return (
     <S.Card>
-      <S.Avatar />
+      <S.Avatar src={avatar} alt={"avatar de " + username} />
       <S.Content>
         <S.Header>
-          <strong>@{author}</strong>
+          <strong>@{username}</strong>
+          <p>{fullname}</p>
           <span>· {when}</span>
         </S.Header>
         <p>{text}</p>

@@ -12,11 +12,12 @@ export const Card = styled.article`
   }
 `;
 
-export const Avatar = styled.div`
+export const Avatar = styled.img`
   width: 48px;
   height: 48px;
   border-radius: 999px;
-  background: #eaeaea;
+  object-fit: cover;
+  background: #f2f2f2;
 `;
 
 export const Content = styled.div`

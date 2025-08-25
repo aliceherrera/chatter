@@ -5,7 +5,7 @@ import logo from "../../assets/logo.png";
 import * as S from "./styles";
 import {
   // BiSearchAlt,
-  // BiSolidHeart,
+  BiSolidHeart,
   BiSolidHomeSmile,
   BiSolidUser,
 } from "react-icons/bi";
@@ -31,14 +31,16 @@ const Sidebar = () => {
           <BiSolidUser />
           Perfil
         </NavLink>
-        {/* <NavLink to="/feed">
+        {
+          /* <NavLink to="/feed">
           <BiSearchAlt />
           Buscar
-        </NavLink>
-        <NavLink to="/feed">
-          <BiSolidHeart />
-          Favoritos
-        </NavLink> */}
+        </NavLink>*/
+          <NavLink to="/feed">
+            <BiSolidHeart />
+            Favoritos
+          </NavLink>
+        }
       </S.Nav>
 
       <S.Bottom>
